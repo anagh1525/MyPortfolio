@@ -99,7 +99,7 @@ function ParticlesBackground() {
         left: 0,
         width: "100vw",
         height: "100vh",
-        zIndex: 0, // behind normal content
+        zIndex: -1, // behind normal content
         pointerEvents: "none", // allow clicks on underlying elements
         background: "transparent", // no color, so your page background shows
       }}

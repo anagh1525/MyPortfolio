@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import "./Certificates.css";
 
-// Example certificate icon (replace with your local file or any URL)
+// Certificate icon URL (update as needed)
 const CERT_ICON_URL = "https://cdn-icons-png.flaticon.com/512/7238/7238706.png";
 
 function Certificates() {
-  // Example data (customize as needed)
+  // Updated certificate data from the resume
   const certificates = [
     {
       title: "Machine Learning Specialization",
@@ -13,14 +13,24 @@ function Certificates() {
       link: "https://coursera.org/share/a00bc379633e5efad5094d85e3cb71c2",
     },
     {
-      title: "Generative AI for Everyone",
-      skill: "AI & ML",
-      link: "",
+      title: "Introduction to Computer Vision and Image Processing",
+      skill: "Computer Vision",
+      link: "https://coursera.org/share/8ed71ff683c7e42d4b5eb9a45e9d4a1f",
     },
     {
-      title: "React Js",
-      skill: "Web Development",
-      link: "https://certificates.ccbp.in/academy/react-js?id=KVKABMRDRL",
+      title: "Convolutional Neural Networks",
+      skill: "Deep Learning",
+      link: "", // Link not provided in the resume
+    },
+    {
+      title: "Natural Language Processing in TensorFlow",
+      skill: "NLP",
+      link: "", // Link not provided in the resume
+    },
+    {
+      title: "Generative AI for Everyone",
+      skill: "AI & ML",
+      link: "", // Link not provided in the resume
     },
     {
       title: "Google Cloud Certified Cloud Digital Leader",
@@ -28,14 +38,14 @@ function Certificates() {
       link: "https://drive.google.com/file/d/1Xx4ZrnMOz5Md-PX7U8YOx03yiB5RCfmD/view?usp=sharing",
     },
     {
-      title: "Introduction to Computer Vision and Image Processing",
-      skill: "Computer Vision",
-      link: "",
-    },
-    {
       title: "Programming Foundations with Python",
       skill: "Programming",
       link: "https://certificates.ccbp.in/academy/programming-foundations-with-python?id=PPVBHLVXBG",
+    },
+    {
+      title: "React Js",
+      skill: "Web Development",
+      link: "https://certificates.ccbp.in/academy/react-js?id=KVKABMRDRL",
     },
     {
       title: "Node JS",
@@ -62,7 +72,7 @@ function Certificates() {
     setPage((prev) => (prev - 1 + pageCount) % pageCount);
   };
 
-  // Current slice of certificates
+  // Get current slice of certificates for the carousel
   const startIndex = page * itemsPerPage;
   const currentCertificates = certificates.slice(
     startIndex,
@@ -73,31 +83,20 @@ function Certificates() {
     <div className="certificates-wrapper">
       <div className="certificates-container">
         <h2>Certificates</h2>
-
         <div className="cert-carousel">
           <button onClick={handlePrev} className="carousel-btn">
             ‹
           </button>
-
           <div className="cert-cards-row">
             {currentCertificates.map((cert, idx) => (
               <div key={idx} className="cert-card">
-                {/* Icon */}
                 <img
                   src={CERT_ICON_URL}
                   alt="Certificate Icon"
                   className="cert-icon"
                 />
-
-                {/* Title */}
                 <h3 className="cert-title">{cert.title}</h3>
-
-                {/* Skill label or "Other" */}
-                <span className="cert-skill">
-                  {cert.skill ? cert.skill : "Other"}
-                </span>
-
-                {/* View button */}
+                <span className="cert-skill">{cert.skill || "Other"}</span>
                 <a
                   href={cert.link}
                   target="_blank"
@@ -109,13 +108,10 @@ function Certificates() {
               </div>
             ))}
           </div>
-
           <button onClick={handleNext} className="carousel-btn">
             ›
           </button>
         </div>
-
-        {/* Dot pagination */}
         <div className="cert-pagination">
           {[...Array(pageCount)].map((_, i) => (
             <div

@@ -1,8 +1,10 @@
 .projects-wrapper {
   position: relative;
-  min-height: 100vh;
   width: 100%;
-  overflow: hidden;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 
 .projects-container {
@@ -10,8 +12,9 @@
   margin: 0 auto;
   padding: 60px 20px;
   text-align: center;
-  position: relative;
   z-index: 1; /* above particle background */
+  position: relative;
+  overflow: hidden;
 }
 
 .projects-container h2 {
