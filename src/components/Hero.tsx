@@ -152,7 +152,7 @@ const Hero: React.FC = () => {
               className="rounded-full overflow-hidden border-4 border-primary/30 shadow-lg shadow-primary/20 relative z-10"
             >
               <img
-                src="src//public//photo.png"
+                src="/photo.png"
                 alt="Anagh portrait"
                 className="w-64 h-64 md:w-80 md:h-80 object-cover"
               />

@@ -186,7 +186,7 @@ export const skillsData: SkillCategory[] = [
       {
         name: "Statistical Analysis",
         level: 80,
-        image: "src//public//statistical-analysis.png",
+        image: "/statistical-analysis.png",
       },
       {
         name: "Pandas",

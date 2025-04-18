@@ -3,7 +3,7 @@ import { Canvas } from "@react-three/fiber";
 import { OrbitControls, PerspectiveCamera, useGLTF } from "@react-three/drei";
 
 const DevSetupModel = () => {
-  const gltf = useGLTF("src//public//computer.glb"); // Path relative to public folder
+  const gltf = useGLTF("/computer.glb"); // Path relative to public folder
 
   return <primitive object={gltf.scene} scale={0.4} />;
 };
