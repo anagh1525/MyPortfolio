@@ -70,9 +70,7 @@ const Experience: React.FC = () => {
                     <h4 className="text-lg font-medium mb-4">
                       {experience.company}
                     </h4>
-                    <p className="text-gray-300 mb-4">
-                      {experience.description}
-                    </p>
+                  
 
                     {experience.highlights && (
                       <ul className="list-disc list-inside space-y-1 text-gray-300">
